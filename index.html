@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Global Tracker | Professional Dashboard</title>
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-shield-virus"></i>
+                <span>COVID-19</span>Tracker
+            </a>
+
+            <div class="nav-links">
+                <a href="#stats" class="nav-link">Statistics</a>
+                <a href="#symptoms" class="nav-link">Symptoms</a>
+                <a href="#prevention" class="nav-link">Prevention</a>
+                <a href="#resources" class="nav-link">Resources</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn-outline">Emergency</button>
+            </div>
+
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up">
+                    <span>Global</span> COVID-19 Tracker
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Real-time data visualization and prevention guidelines
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#stats" class="btn btn-outline">
+                        <i class="fas fa-chart-line"></i> View Dashboard
+                    </a>
+                    <a href="#prevention" class="btn btn-outline">
+                        <i class="fas fa-shield-alt"></i> Safety Measures
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Dashboard -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Global <span>Statistics</span></h2>
+                <p>Updated in real-time with the latest available data</p>
+            </div>
+
+            <div class="stats-grid">
+                <!-- Confirmed Cases -->
+                <div class="stat-card confirmed" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Confirmed Cases</h3>
+                        <div class="stat-number" id="confirmed-cases">675,304,789</div>
+                        <div class="stat-change increase">
+                            <i class="fas fa-arrow-up"></i> 12,345 new cases
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deaths -->
+                <div class="stat-card deaths" data-aos="fade-up" data-aos-delay="150">
+                    <div class="stat-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total Deaths</h3>
+                        <div class="stat-number" id="total-deaths">6,873,477</div>
+                        <div class="stat-change increase">
+                            <i class="fas fa-arrow-up"></i> 342 new deaths
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recovered -->
+                <div class="stat-card recovered" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Recovered</h3>
+                        <div class="stat-number" id="recovered">652,100,345</div>
+                        <div class="stat-change decrease">
+                            <i class="fas fa-arrow-down"></i> Recovery rate: 96.5%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vaccinated -->
+                <div class="stat-card vaccinated" data-aos="fade-up" data-aos-delay="250">
+                    <div class="stat-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Vaccinated</h3>
+                        <div class="stat-number" id="vaccinated">13.1B</div>
+                        <div class="stat-change">
+                            <i class="fas fa-chart-line"></i> 72% of global population
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Visualization -->
+            <div class="map-container">
+                <div class="map-header">
+                    <h3>Global Spread</h3>
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-color low"></span>
+                            <span>Low</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color medium"></span>
+                            <span>Medium</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color high"></span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="world-map">
+                    <img src="image/map-world-removebg-preview.png" alt="COVID-19 Global Spread">
+                    <div class="hotspot" style="top: 30%; left: 25%;" data-region="North America"></div>
+                    <div class="hotspot" style="top: 37%; left: 55%;" data-region="Europe"></div>
+                    <div class="hotspot" style="top: 45%; left: 70%;" data-region="Asia"></div>
+                </div>
+            </div>
+        </div>
+    </section>
