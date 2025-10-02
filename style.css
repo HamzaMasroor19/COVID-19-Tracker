@@ -740,3 +740,327 @@ input:checked + .slider:before {
     color: var(--text-color);
     margin-bottom: 1.5rem;
 }
+/* ================ PREVENTION SECTION ================ */
+.prevention-section {
+    background-color: var(--bg-light);
+}
+
+.prevention-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.step:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-number {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.step-content p {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.step-icon {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+}
+
+.prevention-video {
+    background-color: var(--bg-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    height: 50%;
+}
+
+.video-placeholder {
+    position: relative;
+    flex: 1;
+    min-height: 25rem;
+    background-color: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-placeholder i {
+    position: absolute;
+    font-size: 5rem;
+    color: white;
+    z-index: 1;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    flex: 1;
+    padding: 3rem;
+}
+
+.video-info h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.video-info p {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+/* ================ RESOURCES SECTION ================ */
+.resources-section {
+    background-color: var(--bg-color);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.resource-card {
+    background-color: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.resource-logo {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource-logo img {
+    max-width: 190%;
+    max-height: 100%;
+    object-fit: contain;
+    border: none;
+}
+
+.resource-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.resource-card p {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.faq-accordion {
+    background-color: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-accordion h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.accordion-item {
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    background-color: var(--bg-dark);
+}
+
+.accordion-header i {
+    transition: var(--transition);
+}
+
+.accordion-header.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--bg-color);
+}
+
+.accordion-content p {
+    padding: 0 2rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+/* ================ CONTACT SECTION ================ */
+.contact-section {
+    background-color: var(--bg-light);
+}
+
+.contact-container {
+    display: flex;
+    gap: 5rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.info-content h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.info-content p {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-md);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 15rem;
+}
