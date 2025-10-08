@@ -1,22 +1,8 @@
 // DOM Elements
-const themeSwitch = document.querySelector('.theme-switch input');
-const toggleIcon = document.getElementById('toggle-icon');
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const backToTop = document.getElementById('backToTop');
 const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-themeSwitch.addEventListener('change', switchTheme);
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleIcon.innerHTML = '<i class="fas fa-moon"></i>';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        toggleIcon.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-}
 
 // Mobile Menu Toggle
 hamburger.addEventListener('click', () => {
@@ -123,17 +109,6 @@ function initCounters() {
     });
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initAOS();
-    initCounters();
-    
-    // Set initial theme
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        themeSwitch.checked = true;
-        switchTheme({ target: { checked: true } });
-    }
-});
 // Animated Stats Counter
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -188,6 +163,8 @@ document.querySelector('.video-placeholder').addEventListener('click', () => {
     // In a real implementation, this would open a modal or replace with an iframe
     alert('Video player would open here in a real implementation');
 });
+
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Debug: Check if stats section exists
     const statsSection = document.getElementById('stats');
@@ -197,13 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Stats section found:', statsSection);
     }
     
-    // Rest of your initialization code
+    // Initialize animations and counters
     initAOS();
     initCounters();
-    
-    // Set initial theme
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        themeSwitch.checked = true;
-        switchTheme({ target: { checked: true } });
-    }
 });
